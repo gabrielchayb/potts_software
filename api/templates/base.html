@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Gestão Pré-Natal Inteligente{% endblock %}</title>
+    <title>{% block title %} Aila Health  {% endblock %}</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -53,21 +53,24 @@
         <div>
             <div class="h-16 flex items-center px-6 border-b border-gray-100">
                 <i class="ph-fill ph-dna text-medical-600 text-2xl mr-2"></i>
-                <span class="font-bold text-lg text-gray-800">Natal<span class="text-medical-600">AI</span></span>
+                <span class="font-bold text-lg text-gray-800">Alia<span class="text-medical-600">AI</span></span>
             </div>
 
             <nav class="mt-6 px-4 space-y-2">
                 <a href="{{ url_for('dashboard') }}" class="nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg group transition-colors {% if active_page == 'dashboard' %}bg-medical-50 text-medical-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}">
                     <i class="ph ph-squares-four text-xl mr-3"></i> Dashboard
                 </a>
-                <a href="{{ url_for('paciente_julia') }}" class="nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg group transition-colors {% if active_page == 'paciente' %}bg-medical-50 text-medical-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}">
+                <a href="{{ url_for('historico_clinico') }}" class="nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg group transition-colors {% if active_page == 'paciente' %}bg-medical-50 text-medical-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}">
                     <i class="ph ph-user text-xl mr-3"></i> Histórico Clínico
                 </a>
                 <a href="{{ url_for('analise') }}" class="nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg group transition-colors {% if active_page == 'analise' %}bg-medical-50 text-medical-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}">
-                    <i class="ph ph-brain text-xl mr-3"></i> Análise IA
+                    <i class="ph ph-brain text-xl mr-3"></i> Análise Geral
                 </a>
-                <a href="{{ url_for('decisao') }}" class="nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg group transition-colors {% if active_page == 'decisao' %}bg-medical-50 text-medical-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}">
-                    <i class="ph ph-stethoscope text-xl mr-3"></i> Apoio à Decisão
+                <a href="{{ url_for('linha_tempo') }}" class="nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg group transition-colors {% if active_page == 'decisao' %}bg-medical-50 text-medical-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}">
+                    <i class="ph ph-stethoscope text-xl mr-3"></i> Linha do Tempo
+                </a>
+                <a href="{{ url_for('configuracoes') }}" class="nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg group transition-colors {% if active_page == 'decisao' %}bg-medical-50 text-medical-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}">
+                    <i class="ph ph-user text-xl mr-3"></i> Configurações
                 </a>
             </nav>
         </div>
@@ -107,7 +110,7 @@
                             <div class="flex gap-3">
                                 <div class="mt-1 h-2 w-2 rounded-full bg-red-500 flex-shrink-0"></div>
                                 <div>
-                                    <p class="text-sm font-medium text-gray-800">Risco Elevado: Ana Clara</p>
+                                    <p class="text-sm font-medium text-gray-800">Risco Elevado: Carla Dias</p>
                                     <p class="text-xs text-gray-500 mt-1">Pressão arterial acima do normal.</p>
                                 </div>
                             </div>
