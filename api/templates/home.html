@@ -113,7 +113,7 @@
         </div>
     </nav>
 
-    <main class="z-10 flex flex-col text-center max-w-7xl mx-auto pt-40 px-6 pb-20 relative items-center">
+   <main class="z-10 flex flex-col text-center max-w-7xl mx-auto pt-40 px-6 pb-20 relative items-center">
         
         <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-200 bg-white/60 backdrop-blur-md text-xs font-semibold mb-8 text-emerald-800 shadow-sm hover:scale-105 transition-transform cursor-default">
             <span class="relative flex h-2.5 w-2.5">
@@ -153,12 +153,15 @@
                 <div class="h-8 px-4 rounded-md border border-neutral-200 flex items-center text-xs text-neutral-500 w-80 bg-neutral-50 shadow-inner">
                     <i class="lucide lucide-lock w-3 h-3 mr-2 opacity-50"></i> aila.platform/paciente/silva-ana
                 </div>
-                <div></div>
+                <div class="flex items-center gap-2">
+                     <i class="lucide lucide-layout-grid w-4 h-4 text-neutral-300 cursor-pointer hover:text-neutral-500"></i>
+                     <i class="lucide lucide-more-horizontal w-4 h-4 text-neutral-300 cursor-pointer hover:text-neutral-500"></i>
+                </div>
             </div>
 
             <div class="bg-white/90 p-8 grid grid-cols-1 md:grid-cols-12 gap-8 text-left min-h-[500px]">
                 <div class="md:col-span-3 space-y-6 border-r border-neutral-100 pr-6">
-                    <div class="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 border border-neutral-100 hover:shadow-md transition-shadow cursor-default">
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 border border-neutral-100 cursor-default">
                         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-100 to-teal-200 flex items-center justify-center text-emerald-800 font-bold shadow-sm">
                             AS
                         </div>
@@ -170,22 +173,30 @@
                     
                     <div class="space-y-3">
                         <div class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest pl-1">Sinais Vitais</div>
-                        <div class="p-4 rounded-xl border border-neutral-100 bg-white shadow-sm hover:border-emerald-300 transition-all group/card hover:-translate-x-1">
-                            <span class="text-xs text-neutral-500 block mb-1">Idade Gestacional</span>
-                            <div class="text-xl font-bold text-neutral-900 group-hover/card:text-emerald-700 transition-colors">24s 3d</div>
+                        
+                        <div class="p-4 rounded-xl border border-neutral-100 bg-white shadow-sm">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs text-neutral-500 block">Idade Gestacional</span>
+                                <i class="lucide lucide-baby w-4 h-4 text-emerald-500/60"></i>
+                            </div>
+                            <div class="text-xl font-bold text-neutral-900">24s 3d</div>
                         </div>
-                        <div class="p-4 rounded-xl border border-neutral-100 bg-white shadow-sm hover:border-emerald-300 transition-all group/card hover:-translate-x-1">
-                            <span class="text-xs text-neutral-500 block mb-1">Pressão Arterial</span>
+
+                        <div class="p-4 rounded-xl border border-neutral-100 bg-white shadow-sm">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs text-neutral-500 block">Pressão Arterial</span>
+                                <i class="lucide lucide-heart-pulse w-4 h-4 text-emerald-500/60"></i>
+                            </div>
                             <div class="text-xl font-bold text-neutral-900 flex items-center gap-2">
                                 <span class="counter" data-target="110">0</span>/<span class="counter" data-target="70">0</span> 
-                                <span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-semibold animate-pulse">Normal</span>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-semibold">Normal</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="md:col-span-9 space-y-6">
-                    <div class="p-5 rounded-xl border border-emerald-200 bg-emerald-50/80 flex items-start gap-4 shadow-sm backdrop-blur-sm transform hover:scale-[1.01] transition-transform duration-300">
+                    <div class="p-5 rounded-xl border border-emerald-200 bg-emerald-50/80 flex items-start gap-4 shadow-sm backdrop-blur-sm">
                         <div class="p-2 bg-white rounded-full text-emerald-600 shadow-sm animate-bounce">
                             <i class="lucide lucide-sparkles w-5 h-5"></i>
                         </div>
@@ -199,50 +210,60 @@
                     </div>
 
                     <div class="grid grid-cols-2 gap-6">
-                        <div class="p-6 rounded-xl border border-neutral-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="p-6 rounded-xl border border-neutral-200 bg-white shadow-sm">
                             <div class="flex items-center justify-between mb-6">
                                 <span class="text-xs font-bold uppercase tracking-wider text-neutral-500">Ganho de Peso</span>
                                 <i class="lucide lucide-trending-up w-4 h-4 text-emerald-500"></i>
                             </div>
-                            <div class="h-32 w-full flex items-end gap-2 px-2 group/chart">
-                                <div class="w-full bg-neutral-100 rounded-t-lg h-[40%] group-hover/chart:bg-emerald-100 transition-colors delay-75"></div>
-                                <div class="w-full bg-neutral-100 rounded-t-lg h-[50%] group-hover/chart:bg-emerald-100 transition-colors delay-100"></div>
-                                <div class="w-full bg-neutral-100 rounded-t-lg h-[65%] group-hover/chart:bg-emerald-100 transition-colors delay-150"></div>
-                                <div class="w-full bg-emerald-200/50 rounded-t-lg h-[70%] group-hover/chart:bg-emerald-300 transition-colors delay-200"></div>
-                                <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-lg h-[85%] relative shadow-lg shadow-emerald-500/30 group-hover/chart:scale-y-105 origin-bottom transition-transform">
-                                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white text-[10px] px-2 py-1 rounded font-bold opacity-0 group-hover/chart:opacity-100 transition-opacity">Hoje</div>
+                            
+                            <div class="h-32 w-full flex items-end gap-2 px-2">
+                                <div class="w-full bg-neutral-100 rounded-t-lg h-[40%]"></div>
+                                <div class="w-full bg-neutral-100 rounded-t-lg h-[50%]"></div>
+                                <div class="w-full bg-neutral-100 rounded-t-lg h-[65%]"></div>
+                                <div class="w-full bg-emerald-200/50 rounded-t-lg h-[70%]"></div>
+                                <div class="w-full bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-lg h-[85%] relative shadow-lg shadow-emerald-500/30">
+                                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white text-[10px] px-2 py-1 rounded font-bold">Hoje</div>
                                 </div>
                                 <div class="w-full border-t-2 border-dashed border-neutral-300 h-[90%]"></div>
                             </div>
+
+                            <div class="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-center gap-4">
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-neutral-200"></div>
+                                    <span class="text-[10px] text-neutral-500 font-medium">Histórico</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-emerald-200"></div>
+                                    <span class="text-[10px] text-neutral-500 font-medium">Esperado</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                    <span class="text-[10px] text-neutral-900 font-bold">Atual</span>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="p-6 rounded-xl border border-neutral-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="p-6 rounded-xl border border-neutral-200 bg-white shadow-sm">
                              <div class="flex items-center justify-between mb-6">
                                 <span class="text-xs font-bold uppercase tracking-wider text-neutral-500">Exames Recentes</span>
                                 <i class="lucide lucide-folder-open w-4 h-4 text-emerald-500"></i>
                             </div>
                             <div class="space-y-3">
-                                <div class="flex items-center gap-3 p-3 rounded-lg border border-transparent hover:border-emerald-100 hover:bg-emerald-50/50 transition-all group cursor-pointer">
-                                    <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-emerald-100 text-emerald-700 group-hover:bg-white group-hover:shadow-sm transition-all group-hover:scale-110">
-                                        <i class="lucide lucide-file-text w-5 h-5"></i>
-                                    </div>
+                                <div class="flex items-center gap-3 p-3 rounded-lg border border-neutral-100 bg-neutral-50/50">
+                                
                                     <div class="flex-1">
                                         <div class="text-sm font-semibold text-neutral-900">Morfologia.pdf</div>
                                         <div class="text-[10px] text-neutral-500">24 Out • 14MB</div>
                                     </div>
-                                    <i class="lucide lucide-file w-4 h-4 text-neutral-500"></i>
-                                    <i class="lucide lucide-check-circle-2 w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                   
                                 </div>
-                                <div class="flex items-center gap-3 p-3 rounded-lg border border-transparent hover:border-blue-100 hover:bg-blue-50/50 transition-all group cursor-pointer">
-                                    <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-blue-100 text-blue-700 group-hover:bg-white group-hover:shadow-sm transition-all group-hover:scale-110">
-                                        <i class="lucide lucide-file-bar-chart-2 w-5 h-5"></i>
-                                    </div>
+                                <div class="flex items-center gap-3 p-3 rounded-lg border border-neutral-100 bg-neutral-50/50">
+                                    
                                     <div class="flex-1">
                                         <div class="text-sm font-semibold text-neutral-900">Hemograma.pdf</div>
                                         <div class="text-[10px] text-neutral-500">20 Out • 2MB</div>
                                     </div>
-                                    <i class="lucide lucide-file w-4 h-4 text-neutral-500"></i>
-                                    <i class="lucide lucide-check-circle-2 w-4 h-4 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -261,9 +282,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="reveal delay-100 glass-card p-10 rounded-3xl group hover:border-emerald-500/30 transition-all duration-500 bg-white/80 shadow-sm hover:shadow-2xl hover:-translate-y-2">
-                    <div class="w-14 h-14 rounded-2xl border flex items-center justify-center mb-8 group-hover:scale-110 transition-transform bg-gradient-to-br from-white to-neutral-50 border-neutral-200 text-emerald-600 shadow-sm group-hover:rotate-3">
-                        <i class="lucide lucide-brain-circuit w-7 h-7"></i>
-                    </div>
+                
                     <h3 class="text-xl font-bold mb-4 text-neutral-900">Análise de IA</h3>
                     <p class="text-sm leading-relaxed text-neutral-500">
                         Os algoritmos da Aila escaneiam resultados laboratoriais e de imagem, destacando anomalias e riscos de tendência em tempo real.
@@ -271,9 +290,7 @@
                 </div>
 
                 <div class="reveal delay-200 glass-card p-10 rounded-3xl group hover:border-emerald-500/30 transition-all duration-500 bg-white/80 shadow-sm hover:shadow-2xl hover:-translate-y-2">
-                    <div class="w-14 h-14 rounded-2xl border flex items-center justify-center mb-8 group-hover:scale-110 transition-transform bg-gradient-to-br from-white to-neutral-50 border-neutral-200 text-blue-600 shadow-sm group-hover:-rotate-3">
-                        <i class="lucide lucide-database w-7 h-7"></i>
-                    </div>
+                    
                     <h3 class="text-xl font-bold mb-4 text-neutral-900">Repositório Unificado</h3>
                     <p class="text-sm leading-relaxed text-neutral-500">
                         Armazene exames físicos, histórico médico e dados clínicos suplementares em um local seguro e acessível.
@@ -281,9 +298,7 @@
                 </div>
 
                 <div class="reveal delay-300 glass-card p-10 rounded-3xl group hover:border-emerald-500/30 transition-all duration-500 bg-white/80 shadow-sm hover:shadow-2xl hover:-translate-y-2">
-                    <div class="w-14 h-14 rounded-2xl border flex items-center justify-center mb-8 group-hover:scale-110 transition-transform bg-gradient-to-br from-white to-neutral-50 border-neutral-200 text-purple-600 shadow-sm group-hover:rotate-3">
-                        <i class="lucide lucide-activity w-7 h-7"></i>
-                    </div>
+                    
                     <h3 class="text-xl font-bold mb-4 text-neutral-900">Monitoramento</h3>
                     <p class="text-sm leading-relaxed text-neutral-500">
                         Transforme pontos de dados estáticos em curvas de crescimento dinâmicas e tendências de saúde visualizáveis.
@@ -379,8 +394,13 @@
 
     <section class="py-24 text-center bg-white border-t border-neutral-100">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="reveal text-2xl font-bold tracking-tight mb-16 text-neutral-900">Confiado por clínicas modernas</h2>
+            <h2 class="reveal text-2xl font-bold tracking-tight mb-16 text-neutral-900">Desenvolvido por</h2>
             
+            <div class="flex flex-wrap justify-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-500 hover:opacity-100 mb-20">
+                <div class="flex items-center gap-2"><i class="lucide lucide-plus-square w-6 h-6"></i> <span class="font-bold text-lg">ENTROPIC AI</span></div>
+               
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                 <div class="reveal delay-100 p-8 border rounded-2xl border-neutral-200 bg-neutral-50 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-4">
@@ -461,6 +481,7 @@
                 <div class="flex gap-6">
                     <i class="lucide lucide-twitter w-5 h-5 cursor-pointer text-neutral-400 hover:text-emerald-600 transition-colors"></i>
                     <i class="lucide lucide-linkedin w-5 h-5 cursor-pointer text-neutral-400 hover:text-emerald-600 transition-colors"></i>
+                    <i class="lucide lucide-github w-5 h-5 cursor-pointer text-neutral-400 hover:text-emerald-600 transition-colors"></i>
                 </div>
             </div>
         </div>
