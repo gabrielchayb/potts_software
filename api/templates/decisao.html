@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block header_title %}Apoio à Decisão Médica{% endblock %}
+{% block header_subtitle %}Protocolos sugeridos baseados em evidências{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 flex items-start gap-3">
+        <i class="ph-fill ph-lightbulb text-yellow-600 text-xl mt-1"></i>
+        <div>
+            <h3 class="font-bold text-yellow-800">Protocolo Sugerido: Anemia na Gestação</h3>
+            <p class="text-sm text-yellow-700 mt-1">Baseado nas diretrizes da FEBRASGO e nos resultados laboratoriais recentes.</p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition cursor-pointer group">
+            <div class="flex justify-between items-start mb-4">
+                <div class="p-3 bg-medical-50 rounded-lg text-medical-600 group-hover:bg-medical-600 group-hover:text-white transition">
+                    <i class="ph ph-pill text-2xl"></i>
+                </div>
+                <input type="checkbox" class="w-5 h-5 text-medical-600 rounded border-gray-300 focus:ring-medical-500">
+            </div>
+            <h3 class="font-bold text-gray-900">Gerar Prescrição</h3>
+            <p class="text-sm text-gray-500 mt-2">Sulfato Ferroso 40mg - 1 cp via oral antes do almoço.</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition cursor-pointer group">
+            <div class="flex justify-between items-start mb-4">
+                <div class="p-3 bg-blue-50 rounded-lg text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="ph ph-file-text text-2xl"></i>
+                </div>
+                <input type="checkbox" class="w-5 h-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+            </div>
+            <h3 class="font-bold text-gray-900">Solicitar Retorno</h3>
+            <p class="text-sm text-gray-500 mt-2">Hemograma de controle em 4 semanas.</p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition cursor-pointer group">
+            <div class="flex justify-between items-start mb-4">
+                <div class="p-3 bg-purple-50 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition">
+                    <i class="ph ph-chats text-2xl"></i>
+                </div>
+                <input type="checkbox" class="w-5 h-5 text-purple-600 rounded border-gray-300 focus:ring-purple-500">
+            </div>
+            <h3 class="font-bold text-gray-900">Enviar Orientação Nutricional</h3>
+            <p class="text-sm text-gray-500 mt-2">Enviar PDF via WhatsApp com dieta rica em ferro.</p>
+        </div>
+    </div>
+    
+    <div class="fixed bottom-8 right-8">
+        <button class="bg-gray-900 text-white px-6 py-3 rounded-full shadow-xl font-medium flex items-center gap-2 hover:scale-105 transition">
+            <i class="ph ph-check"></i> Confirmar Conduta
+        </button>
+    </div>
+</div>
+{% endblock %}

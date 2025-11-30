@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block header_title %}Visão Geral{% endblock %}
+{% block header_subtitle %}A melhor tecnologia para cuidar das nossas buchudinhas!{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-start">
+                <div>
+                    <p class="text-xs font-medium text-gray-500 uppercase">Pacientes Ativas</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mt-2">142</h3>
+                </div>
+                <span class="p-2 bg-blue-50 text-blue-600 rounded-lg"><i class="ph ph-users"></i></span>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-start">
+                <div>
+                    <p class="text-xs font-medium text-gray-500 uppercase">Exames Pendentes</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mt-2">12</h3>
+                </div>
+                <span class="p-2 bg-yellow-50 text-yellow-600 rounded-lg"><i class="ph ph-clock"></i></span>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-start">
+                <div>
+                    <p class="text-xs font-medium text-gray-500 uppercase">Alertas de Risco</p>
+                    <h3 class="text-2xl font-bold text-red-600 mt-2">3</h3>
+                </div>
+                <span class="p-2 bg-red-50 text-red-600 rounded-lg"><i class="ph ph-warning"></i></span>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-start">
+                <div>
+                    <p class="text-xs font-medium text-gray-500 uppercase">Precisão da IA</p>
+                    <h3 class="text-2xl font-bold text-medical-600 mt-2">98.4%</h3>
+                </div>
+                <span class="p-2 bg-medical-50 text-medical-600 rounded-lg"><i class="ph ph-chart-line-up"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+        <div class="px-6 py-4 border-b border-gray-100">
+            <h3 class="font-semibold text-gray-800">Atividades Recentes</h3>
+        </div>
+        <table class="w-full text-sm text-left">
+            <thead class="text-xs text-gray-500 uppercase bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3">Paciente</th>
+                    <th class="px-6 py-3">Exame</th>
+                    <th class="px-6 py-3">Status IA</th>
+                    <th class="px-6 py-3">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b hover:bg-gray-50 transition">
+                    <td class="px-6 py-4 font-medium text-gray-900">Mariana Costa (24ª sem)</td>
+                    <td class="px-6 py-4">Ultrassom Morfológico</td>
+                    <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Normal</span></td>
+                    <td class="px-6 py-4"><a href="{{ url_for('paciente_mariana') }}" class="text-medical-600 hover:underline font-medium">Ver</a></td>
+                </tr>
+                <tr class="border-b hover:bg-gray-50 transition">
+                    <td class="px-6 py-4 font-medium text-gray-900">Julia Santos (12ª sem)</td>
+                    <td class="px-6 py-4">Hemograma Completo</td>
+                    <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full flex items-center gap-1 w-fit"><i class="ph-fill ph-warning"></i> Atenção</span></td>
+                    <td class="px-6 py-4"><a href="{{ url_for('analise') }}" class="text-medical-600 hover:underline font-medium">Analisar</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
