@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block header_title %}Histórico Clínico: Carla Gutierrez{% endblock %}
+{% block header_subtitle %}Visualização detalhada do prontuário{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="flex items-center gap-2 mb-4">
+        <a href="{{ url_for('dashboard') }}" class="text-gray-400 hover:text-gray-700"><i class="ph ph-arrow-left text-xl"></i></a>
+        <span class="text-sm text-gray-500">Voltar para lista</span>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center justify-between border-l-4 border-l-red-500">
+        <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center text-red-700 text-xl font-bold">CG</div>
+            <div>
+                <h2 class="text-xl font-bold text-gray-900">Carla Gutierrez</h2>
+                <p class="text-gray-500">21 anos • G2P1A0 • <span class="text-red-600 font-semibold">3ª Semana</span></p>
+            </div>
+        </div>
+        <div class="flex gap-2">
+            <span class="px-3 py-1 border border-gray-200 rounded-lg text-sm font-medium">Tipo Sanguíneo: O-</span>
+            <span class="px-3 py-1 bg-red-50 text-red-700 rounded-lg text-sm font-medium border border-red200">Alergia: Paracetamol </span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 space-y-6">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                    <i class="ph ph-files text-medical-600"></i> Repositório de Exames
+                </h3>
+                
+                <div class="flex border-b border-gray-200 mb-4">
+                    <button class="px-4 py-2 border-b-2 border-medical-500 text-medical-700 font-medium">Laboratoriais</button>
+                    <button class="px-4 py-2 text-gray-500 hover:text-gray-700">Imagem</button>
+                    <button class="px-4 py-2 text-gray-500 hover:text-gray-700">Histórico Clínico</button>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-white p-2 rounded border border-gray-200">
+                                <i class="ph ph-drop text-red-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Hemograma e Glicemia</h4>
+                                <p class="text-xs text-gray-500">Realizado em 29/11/2025 • Lab. Central</p>
+                            </div>
+                        </div>
+                        <a href="{{ url_for('analise') }}" class="text-sm text-medical-600 font-medium border border-medical-200 px-3 py-1 rounded hover:bg-medical-50">Ver Análise IA</a>
+                    </div>
+                    
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-white p-2 rounded border border-gray-200">
+                                <i class="ph ph-image text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">USG Transvaginal</h4>
+                                <p class="text-xs text-gray-500">Realizado em 15/10/2025 • Clínica Imagem</p>
+                            </div>
+                        </div>
+                        <button class="text-sm text-gray-600 font-medium border border-gray-200 px-3 py-1 rounded hover:bg-gray-100">Abrir Viewer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="font-semibold text-gray-800 mb-4">Sinais Vitais (Última Consulta)</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-500">Pressão Arterial</span>
+                            <span class="font-bold text-gray-900">110/70 mmHg</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-medical-500 h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-500">Peso</span>
+                            <span class="font-bold text-gray-900">49 kg</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="space-y-6">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="font-semibold text-gray-800 mb-4">Acompanhamento de Peso</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-500">Ganho Total</span>
+                            <span class="font-bold text-gray-900">- 0.3kg</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-red-500 h-2 rounded-full" style="width: 3%"></div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Perdendo peso de maneira nao proposital. Alerta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

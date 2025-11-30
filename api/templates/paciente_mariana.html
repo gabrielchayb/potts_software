@@ -15,7 +15,7 @@
             <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 text-xl font-bold">MC</div>
             <div>
                 <h2 class="text-xl font-bold text-gray-900">Mariana Costa</h2>
-                <p class="text-gray-500">28 anos • G2P1A0 • <span class="text-purple-600 font-semibold">24ª Semana</span></p>
+                <p class="text-gray-500">28 anos • G2P1A0 • <span class="text-purple-600 font-semibold">10ª Semana</span></p>
             </div>
         </div>
         <div class="flex gap-2">
@@ -28,41 +28,71 @@
         <div class="lg:col-span-2 space-y-6">
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <i class="ph ph-files text-purple-600"></i> Últimos Exames (2º Trimestre)
+                    <i class="ph ph-files text-medical-600"></i> Repositório de Exames
                 </h3>
                 
+                <div class="flex border-b border-gray-200 mb-4">
+                    <button class="px-4 py-2 border-b-2 border-medical-500 text-medical-700 font-medium">Laboratoriais</button>
+                    <button class="px-4 py-2 text-gray-500 hover:text-gray-700">Imagem</button>
+                    <button class="px-4 py-2 text-gray-500 hover:text-gray-700">Histórico Clínico</button>
+                </div>
+
                 <div class="space-y-4">
                     <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
-                        <div class="flex items-center gap-3">
-                            <div class="bg-white p-2 rounded border border-gray-200">
-                                <i class="ph ph-baby text-purple-500 text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-900">Ultrassom Morfológico</h4>
-                                <p class="text-xs text-gray-500">Realizado hoje • Clínica Materna</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-2">
-                            <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Normal</span>
-                            <button class="text-sm text-gray-600 font-medium border border-gray-200 px-3 py-1 rounded hover:bg-gray-100">Ver Laudo</button>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100 opacity-75">
                         <div class="flex items-center gap-3">
                             <div class="bg-white p-2 rounded border border-gray-200">
                                 <i class="ph ph-drop text-red-500 text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-900">TOTG (Teste de Tolerância a Glicose)</h4>
-                                <p class="text-xs text-gray-500">Realizado há 1 semana</p>
+                                <h4 class="font-medium text-gray-900">Hemograma e Glicemia</h4>
+                                <p class="text-xs text-gray-500">Realizado em 29/11/2025 • Lab. Central</p>
                             </div>
                         </div>
-                        <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Normal</span>
+                        <a href="{{ url_for('analise') }}" class="text-sm text-medical-600 font-medium border border-medical-200 px-3 py-1 rounded hover:bg-medical-50">Ver Análise IA</a>
+                    </div>
+                    
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-white p-2 rounded border border-gray-200">
+                                <i class="ph ph-image text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">USG Transvaginal</h4>
+                                <p class="text-xs text-gray-500">Realizado em 15/10/2025 • Clínica Imagem</p>
+                            </div>
+                        </div>
+                        <button class="text-sm text-gray-600 font-medium border border-gray-200 px-3 py-1 rounded hover:bg-gray-100">Abrir Viewer</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="space-y-6">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="font-semibold text-gray-800 mb-4">Sinais Vitais (Última Consulta)</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-500">Pressão Arterial</span>
+                            <span class="font-bold text-gray-900">110/70 mmHg</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-medical-500 h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-500">Peso</span>
+                            <span class="font-bold text-gray-900">62.5 kg</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div class="space-y-6">
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
